@@ -63,7 +63,7 @@
 .checkbox,
 .add,
 .edit,
-.delete{
+.delete {
   outline: none;
 }
 
@@ -114,7 +114,7 @@
 
 #new:focus,
 #editing:focus,
-.modifying:focus{
+.modifying:focus {
   color: #333;
 }
 
