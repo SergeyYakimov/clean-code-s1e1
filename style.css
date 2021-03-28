@@ -44,20 +44,32 @@
   display: flex;
 }
 
-#incompleted, #completed {
+#incompleted,
+#completed {
   margin: 0;
   padding: 0px;
 }
 
-.non-editing, .editing, .item, .caption {
+.non-editing,
+.editing,
+.item,
+.caption {
   list-style: none;
 }
 
-#new, #editing, .modifying, .checkbox, .add, .edit, .delete{
+#new,
+#editing,
+.modifying,
+.checkbox,
+.add,
+.edit,
+.delete{
   outline: none;
 }
 
-.add, .edit, .delete {
+.add,
+.edit,
+.delete {
   background: none;
   border: 0px;
   color: #888;
@@ -67,7 +79,9 @@
   cursor: pointer;
 }
 
-.add:hover, .edit:hover, .delete:hover {
+.add:hover,
+.edit:hover,
+.delete:hover {
   color: #3a3a3a;
 }
 
@@ -83,7 +97,9 @@
   text-transform: uppercase;
 }
 
-#new, #editing, .modifying {
+#new,
+#editing,
+.modifying {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -96,7 +112,9 @@
   color: #888;
 }
 
-#new:focus, #editing:focus, .modifying:focus{
+#new:focus,
+#editing:focus,
+.modifying:focus{
   color: #333;
 }
 
@@ -115,17 +133,22 @@
 }
 
 /* Task list */
-.non-editing, .editing, .item {
+.non-editing,
+.editing,
+.item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.checkbox, .task, #editing, .edit, .delete {
+.checkbox,
+.task,
+#editing,
+.edit,
+.delete {
   vertical-align: middle;
 }
 
@@ -140,7 +163,8 @@
   width: 226px;
 }
 
-#editing, .modifying {
+#editing,
+.modifying {
   width: 226px;
 }
 
@@ -165,7 +189,8 @@
 }
 
 /* Edit Task */
-.modifying, #editing {
+.modifying,
+#editing {
   display: none;
 }
 
