@@ -45,16 +45,16 @@
 }
 
 #incompleted, #completed {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 
 .non-editing, .editing, .item, .caption {
-  list-style:none;
+  list-style: none;
 }
 
 #new, #editing, .modifying, .checkbox, .add, .edit, .delete{
-  outline:none;
+  outline: none;
 }
 
 .add, .edit, .delete {
@@ -166,14 +166,14 @@
 
 /* Edit Task */
 .modifying, #editing {
-  display:none
+  display: none
 }
 
 .editing .modifying {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .editing .sticker {
-  display:none;
+  display: none;
 }
