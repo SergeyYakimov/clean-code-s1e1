@@ -4,46 +4,59 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .header .image {
   width: 100%;
 }
+
 .header .more {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.header { text-align: center;
+
+  .header {
+    text-align: center;
+  }
+
 }
-}
+
 .container {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
+
 .task {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
+
 .wrapper {
   display: flex;
 }
+
 #incompleted, #completed {
   margin:0;
   padding: 0px;
 }
+
 .non-editing, .editing, .item, .caption {
   list-style:none;
 }
+
 #new, #editing, .modifying, .checkbox, .add, .edit, .delete{
   outline:none;
 }
+
 .add, .edit, .delete {
   background: none;
   border: 0px;
@@ -53,9 +66,11 @@
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 .add:hover, .edit:hover, .delete:hover {
   color: #3a3a3a;
 }
+
 /* Heading */
 .caption,
 .new {
@@ -67,6 +82,7 @@
   margin: 0;
   text-transform: uppercase;
 }
+
 #new, #editing, .modifying {
   margin: 0;
   font-size: 18px;
@@ -79,6 +95,7 @@
   font-family: Lato, sans-serif;
   color: #888;
 }
+
 #new:focus, #editing:focus, .modifying:focus{
   color: #333;
 }
@@ -88,9 +105,11 @@
   display: block;
   margin: 0 0 20px;
 }
+
 #new {
   width: 318px;
 }
+
 .add:hover {
   color: #0fc57c;
 }
@@ -105,6 +124,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .checkbox, .task, #editing, .edit, .delete {
   vertical-align: middle;
 }
@@ -112,23 +132,28 @@
 .checkbox {
   margin: 0 10px;
 }
+
 .sticker {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
+
 #editing, .modifying {
   width: 226px
 }
+
 .delete:hover {
   color: #cf2323;
 }
+
 .delete .remove {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
+
 .delete .remove:hover {
   transform: rotateZ(0);
 }
