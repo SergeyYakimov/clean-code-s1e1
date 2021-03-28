@@ -140,11 +140,11 @@
 }
 
 /* Edit Task */
-.modifying[type="text"], #editing[type="text"] {
+.modifying, #editing {
   display:none
 }
 
-.editing .modifying[type="text"] {
+.editing .modifying {
   display:inline-block;
   width:224px
 }
