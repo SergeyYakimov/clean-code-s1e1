@@ -8,15 +8,16 @@
 .header {
   width: 500px;
   margin: 0 auto;
-  display: block;
+  margin-bottom: 18px;
   text-align: right;
 }
 
-.header .image {
+.header__image {
+  display: block;
   width: 100%;
 }
 
-.header .more {
+.header__more {
   font-family: fantasy, cursive;
 }
 
@@ -34,7 +35,8 @@
   margin: 0 auto 0;
 }
 
-.task {
+.task,
+.sticker {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -44,34 +46,25 @@
   display: flex;
 }
 
-#incompleted,
-#completed {
+.todos__list {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
-.non-editing,
-.editing,
-.item,
+.todos__item,
 .caption {
   list-style: none;
 }
 
-#new,
-#editing,
-.modifying,
+.task,
 .checkbox,
-.add,
-.edit,
-.delete {
+.button {
   outline: none;
 }
 
-.add,
-.edit,
-.delete {
+.button {
   background: none;
-  border: 0px;
+  border: 0;
   color: #888;
   font-size: 15px;
   width: 60px;
@@ -79,15 +72,13 @@
   cursor: pointer;
 }
 
-.add:hover,
-.edit:hover,
-.delete:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
 .caption,
-.new {
+.adding__new {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -97,10 +88,10 @@
   text-transform: uppercase;
 }
 
-#new,
-#editing,
-.modifying {
+.task {
+  display: block;
   margin: 0;
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 18px;
   height: 21px;
@@ -112,30 +103,35 @@
   color: #888;
 }
 
-#new:focus,
-#editing:focus,
-.modifying:focus {
+.task:focus {
   color: #333;
 }
 
 /* New Task */
-.new {
+.adding {
+  margin-bottom: 16px;
+}
+
+.adding__new {
   display: block;
   margin: 0 0 20px;
 }
 
-#new {
+.task_add {
   width: 318px;
 }
 
-.add:hover {
+.button_add:hover {
   color: #0fc57c;
 }
 
 /* Task list */
-.non-editing,
-.editing,
-.item {
+.todos_completed {
+  position: relative;
+  bottom: 4px;
+}
+
+.todos__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -146,39 +142,42 @@
 
 .checkbox,
 .task,
-#editing,
-.edit,
-.delete {
+.sticker,
+.task_hidden,
+.button_edit,
+.button_delete {
   vertical-align: middle;
 }
 
 .checkbox {
+  display: block;
+  box-sizing: border-box;
   margin: 0 10px;
 }
 
 .sticker {
   padding-left: 10px;
-  box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-#editing,
-.modifying {
+.task_hidden,
+.task_editing,
+.task_completed {
   width: 226px;
 }
 
-.delete:hover {
+.button_delete:hover {
   color: #cf2323;
 }
 
-.delete .remove {
+.remove {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete .remove:hover {
+.remove:hover {
   transform: rotateZ(0);
 }
 
@@ -196,22 +195,23 @@
 }
 
 /* Completed */
-#completed .sticker {
+.sticker_completed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.modifying,
-#editing {
+.task_completed,
+.task_editing,
+.task_hidden {
   display: none;
 }
 
-.editing .modifying {
+.task_editing {
   display: inline-block;
   width: 224px;
 }
 
-.editing .sticker {
+.sticker_hidden {
   display: none;
 }

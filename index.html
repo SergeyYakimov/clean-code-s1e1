@@ -10,8 +10,8 @@
   </head>
   <body class="app">
     <header class="header">
-      <img class="image" src="./eisenhower-matrix.jpg" alt="the Eisenhower matrix of the distribution of tasks by their urgency and importance">
-      <a class="more"
+      <img class="header__image" src="./eisenhower-matrix.jpg" alt="the Eisenhower matrix of the distribution of tasks by their urgency and importance">
+      <a class="header__more"
           href="https://goal-life.com/page/method/matrix-eisenhower">
           Want more details?
       </a>
@@ -20,54 +20,54 @@
     <main class="container">
       <article>
         <h2 class="visually-hidden">User's Todos</h2>
-        <section id="adding">
+        <section class="adding">
           <h3 class="visually-hidden">Adding Todos</h3>
-          <label class="new" for="new">Add Item</label>
+          <label class="adding__new" for="new">Add Item</label>
           <div class="wrapper">
             <input
+                class="task task_add"
                 id="new"
-                class="task"
                 type="text">
-            <button class="add">Add</button>
+            <button class="button button_add">Add</button>
           </div>
         </section>
-        <section>
+        <section class="todos todos_incompleted">
           <h3 class="caption">Todo</h3>
-          <ul id="incompleted">
-            <li class="non-editing">
+          <ul class="todos__list todos__list_incompleted" id="incompleted">
+            <li class="todos__item todos__item_stable">
               <input type="checkbox" class="checkbox">
-              <label class="task sticker">Pay Bills</label>
-              <input type="text" id="editing">
-              <button class="edit">Edit</button>
-              <button class="delete">
+              <label class="sticker">Pay Bills</label>
+              <input type="text" class="task task_hidden">
+              <button class="button button_edit">Edit</button>
+              <button class="button button_delete">
                 <img class="remove" src="./remove.svg" alt="">
                 <span class="visually-hidden">Delete</span>
               </button>
             </li>
-            <li class="editing">
+            <li class="todos__item todos__item_editing">
               <input type="checkbox" class="checkbox">
-              <label class="task sticker">Go Shopping</label>
+              <label class="sticker sticker_hidden">Go Shopping</label>
               <input
-                  class="modifying task"
+                  class="task task_editing "
                   type="text"
                   value="Go Shopping">
-              <button class="edit">Save</button>
-              <button class="delete">
+              <button class="button button_edit">Save</button>
+              <button class="button button_delete">
                 <img class="remove" src="./remove.svg" alt="">
                 <span class="visually-hidden">Delete</span>
               </button>
             </li>
           </ul>
         </section>
-        <section>
+        <section class="todos todos_completed">
           <h3 class="caption">Completed</h3>
-          <ul id="completed">
-            <li class="item">
+          <ul class="todos__list todos__list_completed" id="completed">
+            <li class="todos__item todos__item_completed">
               <input type="checkbox" class="checkbox" checked>
-              <label class="task sticker">See the Doctor</label>
-              <input class="modifying task" type="text">
-              <button class="edit">Edit</button>
-              <button class="delete">
+              <label class="sticker sticker_completed">See the Doctor</label>
+              <input class="task task_completed " type="text">
+              <button class="button button_edit">Edit</button>
+              <button class="button button_delete">
                 <img class="remove" src="./remove.svg" alt="">
                 <span class="visually-hidden">Delete</span>
               </button>
