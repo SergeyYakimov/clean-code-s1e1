@@ -18,7 +18,7 @@
       <h1 class="visually-hidden">TODO Application</h1>
     </header>
     <main class="container">
-      <article>
+      <article class="inner">
         <h2 class="visually-hidden">User's Todos</h2>
         <section class="adding">
           <h3 class="visually-hidden">Adding Todos</h3>
@@ -35,9 +35,9 @@
           <h3 class="caption">Todo</h3>
           <ul class="todos__list todos__list_incompleted" id="incompleted">
             <li class="todos__item todos__item_stable">
-              <input type="checkbox" class="checkbox">
+              <input class="checkbox" type="checkbox">
               <label class="sticker">Pay Bills</label>
-              <input type="text" class="task task_hidden">
+              <input class="task task_hidden" type="text">
               <button class="button button_edit">Edit</button>
               <button class="button button_delete">
                 <img class="remove" src="./remove.svg" alt="">
@@ -45,7 +45,7 @@
               </button>
             </li>
             <li class="todos__item todos__item_editing">
-              <input type="checkbox" class="checkbox">
+              <input class="checkbox" type="checkbox">
               <label class="sticker sticker_hidden">Go Shopping</label>
               <input
                   class="task task_editing"
@@ -63,7 +63,7 @@
           <h3 class="caption">Completed</h3>
           <ul class="todos__list todos__list_completed" id="completed">
             <li class="todos__item todos__item_completed">
-              <input type="checkbox" class="checkbox" checked>
+              <input class="checkbox" type="checkbox" checked>
               <label class="sticker sticker_completed">See the Doctor</label>
               <input class="task task_completed" type="text">
               <button class="button button_edit">Edit</button>
